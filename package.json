@@ -1,0 +1,61 @@
+{
+  "name": "task-list",
+  "version": "2.0.0",
+  "description": "Warm Paper 风格本地任务清单 — Electron + React",
+  "main": "out/main/main.js",
+  "type": "module",
+  "author": "lyl",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "icon": "node scripts/build-icon.js",
+    "pack": "npm run icon && electron-vite build && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-day-picker": "^9.4.4",
+    "react-dom": "^18.3.1",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "png-to-ico": "^2.1.8",
+    "postcss": "^8.4.49",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.16",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  },
+  "build": {
+    "appId": "com.lyl.tasklist",
+    "productName": "Task List",
+    "win": {
+      "icon": "assets/icons/icon.ico",
+      "target": [
+        "nsis"
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "files": [
+      "out/**/*",
+      "assets/icons/**/*"
+    ]
+  }
+}

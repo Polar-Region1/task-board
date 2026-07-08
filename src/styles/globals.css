@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page:       #fef9f0;
+  --bg-sidebar:    #fef3e2;
+  --bg-card:       #ffffff;
+  --border-soft:   #fed7aa;
+  --text-primary:  #292524;
+  --text-body:     #44403c;
+  --text-muted:    #a8a29e;
+  --accent:        #fb923c;
+  --accent-strong: #ea580c;
+  --success:       #84cc16;
+  --danger:        #dc2626;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-body);
+  font-family: 'Inter', 'HarmonyOS Sans SC', 'Microsoft YaHei', sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-soft); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.title-serif {
+  font-family: Georgia, 'KaiTi', serif;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+/* react-day-picker overrides */
+.rdp { --rdp-accent-color: var(--accent); --rdp-background-color: var(--bg-card); margin: 0; }
+.rdp-day_selected, .rdp-day_selected:hover { background: var(--accent); color: white; }
+.rdp-day_today { font-weight: 700; color: var(--accent-strong); }
+.rdp-button:hover { background: var(--bg-sidebar); }
+.rdp-caption_label, .rdp-head_cell { color: var(--text-primary); }
