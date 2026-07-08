@@ -21,8 +21,15 @@
 
 ## 截图
 
-> 主界面：侧边栏 + 任务列表 + 编辑抽屉
-> 便签窗口：从侧边栏拖出，Always-on-Top
+<div align="center">
+  <img src="screenshots/1.png" width="480" alt="主界面" />
+  <p>主界面：侧边栏 + 任务列表 + 编辑抽屉</p>
+</div>
+
+<div align="center">
+  <img src="screenshots/2.png" width="480" alt="便签窗口" />
+  <p>便签窗口：从侧边栏拖出分组，Always-on-Top 浮动显示</p>
+</div>
 
 ## 安装
 
